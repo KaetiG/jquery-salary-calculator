@@ -3,6 +3,7 @@ $(document).ready(readyNow);
 function readyNow(){
     console.log( 'Page Ready');
 $('.submitButton').on('click', submitButtonHandler);
+$('#empTableBody').on('click', '.deleteButton' , deleteButtonHandler);
 }
 
 function submitButtonHandler(){
@@ -30,6 +31,6 @@ function submitButtonHandler(){
 //REMINDER: google how to get placeholder text back lol   
 }
 
-//function deleteButtonHandler(){
-
-//}
+function deleteButtonHandler(){
+    $(this).closest('tr').remove();
+}
